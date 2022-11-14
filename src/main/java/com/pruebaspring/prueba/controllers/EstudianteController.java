@@ -11,6 +11,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,7 +28,8 @@ public class EstudianteController {
     @Autowired
     private EstudianteDao estudianteDao;
 
-    @Operation(description = "Se obtiene un listado de todos los estudiantes, de no haber ningun estudiante devuelve vacio.", 
+    @CrossOrigin
+    @Operation(description = "Se obtiene un listado de todos los estudiantes y de no haber ningun estudiante devuelve vacio.", 
 			summary = "Obtener todos los estudiantes.")
 	@ApiResponses(value = {
 	  @ApiResponse(responseCode = "200", description = "Success OK"),
