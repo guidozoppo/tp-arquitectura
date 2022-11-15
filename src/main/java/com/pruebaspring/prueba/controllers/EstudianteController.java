@@ -23,12 +23,12 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "api/estudiantes")
 @Tag(name = "Estudiante", description ="Diferentes operaciones sobre estudiante")
+@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
 public class EstudianteController {
 
     @Autowired
     private EstudianteDao estudianteDao;
 
-    @CrossOrigin(origins = "https://tpearquitectura.herokuapp.com")
     @Operation(description = "Se obtiene un listado de todos los estudiantes, de no haber ningun estudiante devuelve vacio.", 
 			summary = "Obtener todos los estudiantes.")
 	@ApiResponses(value = {
