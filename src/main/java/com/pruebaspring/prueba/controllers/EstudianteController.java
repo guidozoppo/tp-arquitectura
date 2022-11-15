@@ -28,8 +28,8 @@ public class EstudianteController {
     @Autowired
     private EstudianteDao estudianteDao;
 
-    @CrossOrigin
-    @Operation(description = "Se obtiene un listado de todos los estudiantes y de no haber ningun estudiante devuelve vacio.", 
+    @CrossOrigin(origins = "https://tpearquitectura.herokuapp.com")
+    @Operation(description = "Se obtiene un listado de todos los estudiantes, de no haber ningun estudiante devuelve vacio.", 
 			summary = "Obtener todos los estudiantes.")
 	@ApiResponses(value = {
 	  @ApiResponse(responseCode = "200", description = "Success OK"),
