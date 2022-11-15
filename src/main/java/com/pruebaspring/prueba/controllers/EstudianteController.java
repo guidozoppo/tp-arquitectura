@@ -23,7 +23,7 @@ import java.util.List;
 @RestController
 @RequestMapping(value = "api/estudiantes")
 @Tag(name = "Estudiante", description ="Diferentes operaciones sobre estudiante")
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST})
+@CrossOrigin(origins = "https://tpearquitectura.herokuapp.com/")
 public class EstudianteController {
 
     @Autowired
